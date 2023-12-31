@@ -27,7 +27,7 @@ export const LoginForm = () => {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl");
   const urlError = searchParams.get("error") === "OAuthAccountNotLinked"
-    ? "Email already in use with different provider!"
+    ? "Login failed: This account is not linked to an OAuth provider. Please use a different account or link this one."
     : "";
 
   const [showTwoFactor, setShowTwoFactor] = useState(false);
